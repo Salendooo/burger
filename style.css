@@ -10,11 +10,11 @@ text-decoration: none;
 
 body{
     font-family: Arial;
-    background-image: url('background.png');
+    /* background-image: url('background.png');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100vh; 
+    height: 100vh; */
 }
 
 .menu{
@@ -29,19 +29,21 @@ body{
 
     margin: 0 auto;
     max-width: 1000px;
+    padding: 0 15px;
 
 
 }
 
 .header .container{
+    align-items: center;
     display: flex;
     justify-content: space-between;
     padding-top: 65px;
 }
 
-
-
-
+/* .header{
+    padding: 100px 0px 100px 0px;
+} */
 .menu-item .link{
     color: white;
     font-size: 18px;
@@ -89,7 +91,77 @@ body{
     font-size: 18px;
 }
  
-:link:hover{
-    outline: dotted red;
+.bg-image {
+    position: absolute;
+    z-index: -1;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 768px) {
+    .burger {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        max-width: 100%;
+        font-size: 24px;
+    }
+
+    button {
+        background: none;
+        border: none;
+    }
+
+    .burger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 24px;
+        width: 40px;
+        z-index: 50;
+    }
+
+    .burger span {
+        height: 4px;
+        width: 100%;
+        background: white;
+        border-radius: 5px;
+    }
+
+    .text {
+        min-width: 100%;
+        font-size: 16PX;
+    }
+
+    .menu {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -100%;
+        display: flex;
+        flex-direction: column;
+        background: black;
+        padding-top: 100px;
+        transition: all 0.3s ease 0s;
+
+    }
+.menu.active{
+    left: 0;
+}
+    .header .container {
+        padding-top: 15px;
+
+    }
+
+    .welcome {
+        margin-top: 50px;
+    }
 }
  
